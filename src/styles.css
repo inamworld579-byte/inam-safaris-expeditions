@@ -1,0 +1,231 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-forest: var(--forest);
+  --color-chocolate: var(--chocolate);
+  --color-kaki: var(--kaki);
+  --color-stone: var(--stone);
+  --color-cream: var(--cream);
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+  /* INAM Brand: Forest Green, Chocolate, Khaki, Grey, Cream */
+  --forest: oklch(0.34 0.09 155); /* deep forest green */
+  --forest-deep: oklch(0.22 0.06 155);
+  --chocolate: oklch(0.36 0.07 55); /* warm chocolate brown */
+  --kaki: oklch(0.72 0.07 90); /* khaki / sand */
+  --stone: oklch(0.45 0.01 90); /* warm grey */
+  --cream: oklch(0.96 0.012 85);
+
+  --background: oklch(0.97 0.008 85);
+  --foreground: oklch(0.18 0.02 150);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 150);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 150);
+  --primary: var(--forest);
+  --primary-foreground: var(--cream);
+  --secondary: oklch(0.94 0.02 85);
+  --secondary-foreground: oklch(0.28 0.05 150);
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.45 0.02 90);
+  --accent: var(--kaki);
+  --accent-foreground: var(--forest-deep);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.88 0.015 85);
+  --input: oklch(0.88 0.015 85);
+  --ring: var(--forest);
+}
+
+.dark {
+  --background: oklch(0.14 0.02 150);
+  --foreground: oklch(0.96 0.012 80);
+  --card: oklch(0.18 0.025 150);
+  --card-foreground: oklch(0.96 0.012 80);
+  --popover: oklch(0.18 0.025 150);
+  --popover-foreground: oklch(0.96 0.012 80);
+  --primary: oklch(0.85 0.05 80);
+  --primary-foreground: oklch(0.18 0.02 150);
+  --secondary: oklch(0.24 0.03 150);
+  --secondary-foreground: oklch(0.96 0.012 80);
+  --muted: oklch(0.24 0.03 150);
+  --muted-foreground: oklch(0.7 0.02 80);
+  --accent: var(--kaki);
+  --accent-foreground: oklch(0.14 0.02 150);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.7 0.05 80);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--forest);
+    color: var(--cream);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .hairline {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  }
+  .bg-forest {
+    background-color: var(--forest);
+  }
+  .bg-forest-deep {
+    background-color: var(--forest-deep);
+  }
+  .bg-chocolate {
+    background-color: var(--chocolate);
+  }
+  .bg-kaki {
+    background-color: var(--kaki);
+  }
+  .bg-stone-warm {
+    background-color: var(--stone);
+  }
+  .bg-cream {
+    background-color: var(--cream);
+  }
+  .text-forest {
+    color: var(--forest);
+  }
+  .text-chocolate {
+    color: var(--chocolate);
+  }
+  .text-kaki {
+    color: var(--kaki);
+  }
+  .text-cream {
+    color: var(--cream);
+  }
+  .border-kaki {
+    border-color: var(--kaki);
+  }
+  .border-forest {
+    border-color: var(--forest);
+  }
+
+  /* Cinematic link hover */
+  .cine-link {
+    position: relative;
+    display: inline-block;
+    transition: color 400ms cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .cine-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .cine-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .menu-letter {
+    display: inline-block;
+    transition:
+      transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      color 400ms;
+  }
+  .menu-letter:hover {
+    transform: translateY(-6px);
+    color: var(--kaki);
+  }
+
+  .ken-burns {
+    animation: kenburns 20s ease-out infinite alternate;
+  }
+  @keyframes kenburns {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1.12) translate(-2%, -2%);
+    }
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
