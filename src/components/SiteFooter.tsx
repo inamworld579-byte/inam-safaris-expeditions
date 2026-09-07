@@ -8,10 +8,10 @@ export function SiteFooter() {
         <div className="md:col-span-4">
           <div className="eyebrow text-kaki mb-3">INAM World</div>
           <h3 className="font-display text-3xl md:text-4xl leading-snug mb-4">
-            It's Never About Me — it's about you, the land, and the people.
+            It's Never About Me  it's about you, the land, and the people.
           </h3>
           <p className="text-cream/70 text-sm leading-relaxed mb-6">
-            Tailor-made Rwandan journeys curated by Jean de Dieu Manishimwe — John the Guide.
+            Tailor-made Rwandan journeys curated by Jean de Dieu Manishimwe John the Guide.
             Safaris, gorillas, coffee farms, and cultural uplift across East Africa.
           </p>
           <div className="flex flex-col gap-2 text-sm">
@@ -62,7 +62,7 @@ export function SiteFooter() {
 
         <div className="md:col-span-5">
           <div className="eyebrow text-kaki mb-4 inline-flex items-center gap-2">
-            <MapPin size={14} /> Rwanda — The Land of a Thousand Hills
+            <MapPin size={14} /> Rwanda The Land of a Thousand Hills
           </div>
           <div className="relative rounded-lg overflow-hidden border border-cream/10 bg-forest/40">
             <iframe
@@ -81,7 +81,7 @@ export function SiteFooter() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-16 pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between text-xs text-cream/50 gap-2">
-        <span>© {new Date().getFullYear()} INAM WORLD. All journeys tailor-crafted in Kigali.</span>
+        <span>© {new Date().getFullYear()} INAM WORLD. All journeys tailor crafted in Kigali.</span>
         <span>Conservation · Coffee · Community</span>
       </div>
     </footer>

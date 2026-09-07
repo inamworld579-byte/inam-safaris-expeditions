@@ -4,7 +4,7 @@ import { useRef, type ReactNode } from "react";
 export function Reveal({
   children,
   delay = 0,
-  y = 40,
+  y = 24,
   className = "",
 }: {
   children: ReactNode;
@@ -19,7 +19,7 @@ export function Reveal({
       ref={ref}
       initial={{ opacity: 0, y }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1, delay, ease: [0.2, 0.7, 0.2, 1] }}
+      transition={{ duration: 1.4, delay, ease: [0.2, 0.7, 0.2, 1] }}
       className={className}
     >
       {children}

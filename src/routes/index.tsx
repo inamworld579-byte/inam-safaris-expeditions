@@ -18,7 +18,7 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "INAM WORLD — It's Never About Me · Rwanda Safaris, Gorillas & Coffee" },
+      { title: "INAM WORLD  It's Never About Me · Rwanda Safaris, Gorillas & Coffee" },
       {
         name: "description",
         content:
@@ -117,7 +117,7 @@ function Home() {
           )}
           <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-transparent to-forest-deep/80" />
         </motion.div>
-
+        <motion.h1>Where the wild still breathes.</motion.h1>
         <motion.div
           style={{ opacity }}
           className="relative z-10 h-full flex flex-col justify-end pb-24 px-6 md:px-16 max-w-[1400px] mx-auto"
@@ -153,14 +153,14 @@ function Home() {
           >
             <Link
               to="/journeys"
-              className="group inline-flex items-center gap-3 bg-kaki text-forest-deep px-7 py-4 text-sm tracking-widest uppercase font-medium hover:bg-cream transition"
+              className="group inline-flex items-center gap-3 border border-cream/70 text-cream px-7 py-4 text-sm tracking-widest uppercase font-light hover:bg-cream hover:text-forest-deep transition duration-700"
             >
               Begin a Journey{" "}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition" />
             </Link>
             <Link
               to="/destinations"
-              className="inline-flex items-center gap-3 border border-cream/40 text-cream px-7 py-4 text-sm tracking-widest uppercase hover:bg-cream/10 transition"
+              className="inline-flex items-center gap-3 text-cream/70 text-sm tracking-widest uppercase cine-link hover:text-cream transition duration-700"
             >
               Explore Destinations
             </Link>
