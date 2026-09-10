@@ -56,15 +56,9 @@ export function SiteHeader() {
               <img
                 src={logo}
                 alt="INAM WORLD"
-                className="h-12 md:h-14 w-auto mix-blend-screen brightness-200 contrast-150"
+                className="h-14 md:h-16 w-auto max-w-[190px] object-contain mix-blend-screen brightness-200 contrast-150"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
-              <span className="hidden sm:flex flex-col leading-none">
-                <span className="font-display text-cream text-xl md:text-2xl tracking-wide">
-                  INAM
-                </span>
-                <span className="eyebrow text-kaki text-[0.55rem]">It's Never About Me</span>
-              </span>
             </Link>
 
             <button

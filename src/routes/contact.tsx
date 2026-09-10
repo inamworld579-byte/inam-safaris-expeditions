@@ -30,8 +30,25 @@ function ContactPage() {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
-    const body = `Hello John,%0A%0AMy name is ${form.name} from ${form.country}.%0A%0ATravellers: ${form.travellers}%0ADuration: ${form.duration}%0ATravel month: ${form.month}%0ABudget: ${form.budget}%0A%0AI'm interested in: ${form.interests.join(", ")}%0A%0A${form.message}%0A%0APhone: ${form.phone}%0AEmail: ${form.email}`;
-    window.location.href = `mailto:inamworld579@gmail.com?subject=INAM Enquiry — ${form.name}&body=${body}`;
+    const body = [
+      "Hello John,",
+      "",
+      `My name is ${form.name} from ${form.country}.`,
+      "",
+      `Travellers: ${form.travellers}`,
+      `Duration: ${form.duration}`,
+      `Travel month: ${form.month}`,
+      `Budget: ${form.budget}`,
+      "",
+      `I'm interested in: ${form.interests.join(", ") || "Not specified"}`,
+      "",
+      form.message,
+      "",
+      `Phone: ${form.phone || "Not provided"}`,
+      `Email: ${form.email}`,
+    ].join("\n");
+    const subject = `INAM Enquiry - ${form.name}`;
+    window.location.href = `mailto:inamworld579@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   }
 

@@ -117,7 +117,6 @@ function Home() {
           )}
           <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-transparent to-forest-deep/80" />
         </motion.div>
-        <motion.h1>Where the wild still breathes.</motion.h1>
         <motion.div
           style={{ opacity }}
           className="relative z-10 h-full flex flex-col justify-end pb-24 px-6 md:px-16 max-w-[1400px] mx-auto"
@@ -135,7 +134,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 1.6, ease: [0.2, 0.7, 0.2, 1] }}
             className="font-display text-cream text-5xl md:text-8xl leading-[0.95] max-w-5xl text-balance"
-          ></motion.h1>
+          >Where the wild still breathes.</motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -391,7 +390,7 @@ function Home() {
               {
                 t: "The boats of Lake Kivu at golden hour",
                 k: "Journey · Kivu",
-                img: heroRwandaImg,
+                img: lakeKivuImg,
               },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.1}>
