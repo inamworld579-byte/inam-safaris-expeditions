@@ -133,7 +133,7 @@ function Home() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 1.6, ease: [0.2, 0.7, 0.2, 1] }}
-            className="font-display text-cream text-5xl md:text-8xl leading-[0.95] max-w-5xl text-balance"
+            className="font-display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] max-w-4xl text-balance"
           >Where the wild still breathes.</motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}

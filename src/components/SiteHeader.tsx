@@ -56,7 +56,7 @@ export function SiteHeader() {
               <img
                 src={logo}
                 alt="INAM WORLD"
-                className="h-14 md:h-16 w-auto max-w-[190px] object-contain mix-blend-screen brightness-200 contrast-150"
+                className="h-10 sm:h-12 md:h-14 w-auto max-w-[150px] sm:max-w-[170px] object-contain mix-blend-screen brightness-200 contrast-150"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
             </Link>
@@ -98,7 +98,7 @@ export function SiteHeader() {
                     <Link
                       to={item.to}
                       onClick={() => setOpen(false)}
-                      className="font-display text-4xl md:text-7xl leading-tight block hover:text-kaki transition-colors"
+                      className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9] block hover:text-kaki transition-colors"
                     >
                       <span className="text-kaki/60 text-sm font-sans mr-4 align-middle">
                         0{i + 1}

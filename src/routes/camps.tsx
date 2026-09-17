@@ -1,11 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { Tent, Star, MapPin } from "lucide-react";
-import volcanoesImg from "@/assets/volcanoes-gorilla.jpg";
-import nyungweImg from "@/assets/nyungwe.jpg";
+import bisateImg from "@/assets/bisate.jpg";
+import oneOnlyImg from "@/assets/one and only.jpg";
+import nyungweImg from "@/assets/one And only Nyungwe.jpg";
+import magashiImg from "@/assets/magashi.jpg";
+import cleoImg from "@/assets/cleo.jpg";
+import retreatImg from "@/assets/retreat.jpg";
+import karengeImg from "@/assets/karenge.jpg";
+import milleCollinesImg from "@/assets/hotel de mille colline.jpg";
+import nyanzaHeritageImg from "@/assets/Nyanzaheritage.jpg";
 import lakeKivuImg from "@/assets/lake-kivu.jpg";
-import akageraImg from "@/assets/akagera.jpg";
-import kigaliNight from "@/assets/kigali-night.jpg.asset.json";
 import kingsPalaceImg from "@/assets/kings-palace.jpg";
 
 export const Route = createFileRoute("/camps")({
@@ -16,19 +21,83 @@ export const Route = createFileRoute("/camps")({
     ],
     links: [{ rel: "canonical", href: "/camps" }],
   }),
+
   component: CampsPage,
 });
 
 const camps = [
-  { name: "Bisate Lodge", region: "Volcanoes NP", type: "Forest Lodge", img: volcanoesImg, stars: 5, blurb: "Wilderness-style cocooned villas at the gates of the gorilla forest." },
-  { name: "One&Only Gorilla's Nest", region: "Volcanoes NP", type: "Luxury Lodge", img: nyungweImg, stars: 5, blurb: "Eucalyptus-canopied luxury at the foot of the Virunga." },
-  { name: "Magashi Camp", region: "Akagera NP", type: "Tented Camp", img: akageraImg, stars: 5, blurb: "Tented luxury overlooking Lake Rwanyakazinga." },
-  { name: "One&Only Nyungwe House", region: "Nyungwe NP", type: "Tea Estate Lodge", img: nyungweImg, stars: 5, blurb: "Sleeping beside a working tea estate, beside the rainforest." },
-  { name: "Cleo Lake Kivu", region: "Lake Kivu · Karongi", type: "Lake Hotel", img: lakeKivuImg, stars: 4, blurb: "Quiet shores, hammocks over water, fresh lake tilapia." },
-  { name: "The Retreat by Heaven", region: "Kigali", type: "Boutique Hotel", img: kigaliNight.url, stars: 5, blurb: "Solar-powered Kigali sanctuary with rooftop pool." },
-  { name: "Karenge Bush Camp", region: "Akagera NP", type: "Seasonal Bush Camp", img: akageraImg, stars: 4, blurb: "Mobile, low-impact camp moving with the seasons." },
-  { name: "Hôtel des Mille Collines", region: "Kigali", type: "Iconic City Hotel", img: kigaliNight.url, stars: 4, blurb: "The hotel that became history." },
-  { name: "Nyanza Heritage Inn", region: "Southern Province", type: "Boutique Heritage", img: kingsPalaceImg, stars: 4, blurb: "Stay beside the King's palace, breakfast with the Inyambo." },
+  {
+    name: "Bisate Lodge",
+    region: "Volcanoes NP",
+    type: "Forest Lodge",
+    img: bisateImg,
+    stars: 5,
+    blurb: "Wilderness-style cocooned villas at the gates of the gorilla forest.",
+  },
+  {
+    name: "One&Only Gorilla's Nest",
+    region: "Volcanoes NP",
+    type: "Luxury Lodge",
+    img: oneOnlyImg,
+    stars: 5,
+    blurb: "Eucalyptus-canopied luxury at the foot of the Virunga.",
+  },
+  {
+    name: "Magashi Camp",
+    region: "Akagera NP",
+    type: "Tented Camp",
+    img: magashiImg,
+    stars: 5,
+    blurb: "Tented luxury overlooking Lake Rwanyakazinga.",
+  },
+  {
+    name: "One&Only Nyungwe House",
+    region: "Nyungwe NP",
+    type: "Tea Estate Lodge",
+    img: nyungweImg,
+    stars: 5,
+    blurb: "Sleeping beside a working tea estate, beside the rainforest.",
+  },
+  {
+    name: "Cleo Lake Kivu",
+    region: "Lake Kivu · Karongi",
+    type: "Lake Hotel",
+    img: cleoImg,
+    stars: 4,
+    blurb: "Quiet shores, hammocks over water, fresh lake tilapia.",
+  },
+  {
+    name: "The Retreat by Heaven",
+    region: "Kigali",
+    type: "Boutique Hotel",
+    img: retreatImg,
+    stars: 5,
+    blurb: "Solar-powered Kigali sanctuary with rooftop pool.",
+  },
+  {
+    name: "Karenge Bush Camp",
+    region: "Akagera NP",
+    type: "Seasonal Bush Camp",
+    img: karengeImg,
+    stars: 4,
+    blurb: "Mobile, low-impact camp moving with the seasons.",
+  },
+  {
+    name: "Hôtel des Mille Collines",
+    region: "Kigali",
+    type: "Iconic City Hotel",
+    img: milleCollinesImg,
+    stars: 4,
+    blurb: "The hotel that became history.",
+  },
+  {
+    name: "Nyanza Heritage Inn",
+    region: "Southern Province",
+    type: "Boutique Heritage",
+    img: nyanzaHeritageImg,
+    stars: 4,
+    blurb: "Stay beside the King's palace, breakfast with the Inyambo.",
+  },
 ];
 
 function CampsPage() {
@@ -77,6 +146,8 @@ function CampsPage() {
           </p>
         </Reveal>
         <Reveal delay={0.2}>
+
+
           <Link to="/contact" className="mt-8 inline-flex bg-forest text-cream px-8 py-4 text-sm tracking-widest uppercase hover:bg-forest-deep transition">
             Enquire
           </Link>

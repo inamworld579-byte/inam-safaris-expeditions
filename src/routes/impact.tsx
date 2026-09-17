@@ -64,15 +64,21 @@ function ImpactPage() {
             { icon: Trees, t: "Reforestation Volunteering", b: "Travellers join Umuganda — Rwanda's national community work day — planting indigenous trees beside locals." },
             { icon: Coffee, t: "Youth Barista Training", b: "We sponsor barista and hospitality training for young people from Kigali's poorer hillside neighbourhoods." },
             { icon: Heart, t: "Genocide Survivor Support", b: "A share of every Kigali Memorial visit is donated directly to survivor counselling programmes." },
+
+
+
+
             { icon: Trees, t: "Plastic-Free Camps", b: "We only book lodges committed to zero single-use plastic." },
           ].map((p, i) => (
             <Reveal key={p.t} delay={(i % 3) * 0.1}>
               <div>
+
                 <p.icon className="text-chocolate mb-4" size={28} strokeWidth={1.2}/>
                 <h3 className="font-display text-2xl text-forest mb-2">{p.t}</h3>
                 <p className="text-stone-warm text-sm leading-relaxed">{p.b}</p>
               </div>
             </Reveal>
+
           ))}
         </div>
       </section>
